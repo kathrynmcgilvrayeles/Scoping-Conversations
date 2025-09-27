@@ -18,6 +18,8 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #FFFFFF; /* Brand colour: White */
+            font-size: 1.1rem; /* Increased base font size */
+            line-height: 1.6; /* Improved line spacing for readability */
         }
         .brand-red {
             color: #ED0000;
@@ -29,7 +31,7 @@
             background-color: #E6E6E6; /* Brand colour: Grey 3 */
             color: #4D4D4D; /* Brand colour: Grey 5 */
             border: 1px solid #E6E6E6; /* Brand colour: Grey 3 */
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 1.75rem; /* Increased padding */
             border-radius: 0.5rem;
             cursor: pointer;
             display: flex;
@@ -58,8 +60,8 @@
             box-shadow: 0 3px 5px rgba(0,0,0,0.02);
             overflow: hidden;
             max-height: 0;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
             padding-top: 0;
             padding-bottom: 0;
             transition: max-height 0.5s ease-out, padding 0.5s ease-out;
@@ -70,7 +72,7 @@
         }
         .accordion-content.active {
             padding-top: 1.5rem; /* More padding to separate from header */
-            padding-bottom: 1rem;
+            padding-bottom: 1.5rem; /* Increased bottom padding */
         }
         .accordion-icon {
             transition: transform 0.3s ease;
@@ -114,22 +116,23 @@
         }
         .copilot-container {
             background-color: #FFFFFF;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             width: 90%;
-            max-width: 500px;
+            max-width: 600px; /* Increased max-width */
             text-align: center;
         }
         .copilot-btn {
             background-color: #ED0000;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 0.25rem;
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.2s;
             border: none;
+            font-size: 1rem;
         }
         .copilot-btn:hover {
             background-color: #c80000;
@@ -145,9 +148,9 @@
     </style>
 </head>
 <body class="p-6 md:p-8">
-    <div class="max-w-6xl mx-auto">
-        <div class="bg-brand-red text-white p-4 rounded-lg mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-center">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-brand-red text-white p-6 rounded-lg mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-center">
                 Scoping Conversations
             </h1>
         </div>
@@ -155,10 +158,10 @@
         <!-- Accordion Item 1: Understanding the Business Context & Performance Gaps -->
         <div class="mb-4">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>1. Understand the Business Context & Performance Gaps</span>
-                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <span class="text-xl">1. Understand the Business Context & Performance Gaps</span>
+                <svg class="accordion-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            <div class="accordion-content">
+            <div class="accordion-content text-lg">
                 <p>Before discussing a solution, it's critical to understand the team's strategic goals, their key performance indicators (KPIs), and the specific business challenges they face.</p>
                 <div class="content-section">
                     <h4>Practical Tips & Questions:</h4>
@@ -170,7 +173,7 @@
                          <li><strong>Consider External Factors:</strong> "Are there any upcoming changes that might be impacting performance (e.g., new regulations, product launches, technology updates)?"</li>
                     </ul>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-6">
                     <button class="copilot-btn" onclick="openCopilot(event, 1)">Copilot Assistance?</button>
                 </div>
             </div>
@@ -179,10 +182,10 @@
         <!-- Accordion Item 2: Defining Business Outcomes & Learning Objectives -->
         <div class="mb-4">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>2. Define Business Outcomes & Learning Objectives</span>
-                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <span class="text-xl">2. Define Business Outcomes & Learning Objectives</span>
+                <svg class="accordion-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            <div class="accordion-content">
+            <div class="accordion-content text-lg">
                 <p>Move the conversation from a vague training request to a tangible business outcome. Clearly define what success looks like and what employees need to be able to do differently.</p>
                 <div class="content-section">
                     <h4>Practical Tips & Questions:</h4>
@@ -193,7 +196,7 @@
                         <li><strong>Explore Non-Training Factors:</strong> "Training is one tool, but what other factors might be influencing performance? Let's consider processes, systems, motivation, or role clarity."</li>
                     </ul>
                 </div>
-                 <div class="text-center mt-4">
+                 <div class="text-center mt-6">
                     <button class="copilot-btn" onclick="openCopilot(event, 2)">Copilot Assistance?</button>
                 </div>
             </div>
@@ -202,10 +205,10 @@
         <!-- Accordion Item 3: Identifying Constraints, Risks, and Dependencies -->
         <div class="mb-4">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>3. Identify Constraints, Risks, and Dependencies</span>
-                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <span class="text-xl">3. Identify Constraints, Risks, and Dependencies</span>
+                <svg class="accordion-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            <div class="accordion-content">
+            <div class="accordion-content text-lg">
                 <p>Every initiative has practical limitations. Identifying budget, timeline, technology, and resource constraints upfront is essential for designing a realistic and effective solution.</p>
                 <div class="content-section">
                     <h4>Practical Tips & Questions:</h4>
@@ -217,7 +220,7 @@
                         <li><strong>Assess Risks:</strong> "What are the biggest risks to this project's success? (e.g., changing business priorities, lack of manager support, technology limitations)."</li>
                     </ul>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-6">
                     <button class="copilot-btn" onclick="openCopilot(event, 3)">Copilot Assistance?</button>
                 </div>
             </div>
@@ -226,10 +229,10 @@
         <!-- Accordion Item 4: Clarifying Audience and Scope -->
         <div class="mb-4">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>4. Clarify the Learner Audience & Scope of the Initiative</span>
-                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <span class="text-xl">4. Clarify the Learner Audience & Scope of the Initiative</span>
+                <svg class="accordion-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            <div class="accordion-content">
+            <div class="accordion-content text-lg">
                 <p>Defining clear boundaries prevents "scope creep" and ensures the learning solution is targeted to the right people with the right content.</p>
                 <div class="content-section">
                     <h4>Practical Tips & Questions:</h4>
@@ -241,7 +244,7 @@
                         <li><strong>Agree on Roles:</strong> "Let's clarify roles and responsibilities. Who will be responsible for content provision, reviews, and final sign-off?"</li>
                     </ul>
                 </div>
-                 <div class="text-center mt-4">
+                 <div class="text-center mt-6">
                     <button class="copilot-btn" onclick="openCopilot(event, 4)">Copilot Assistance?</button>
                 </div>
             </div>
@@ -253,8 +256,8 @@
         <div class="copilot-container">
             <!-- Question Screen -->
             <div id="copilotQuestion">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">Copilot Assistance</h2>
-                <p class="mb-6 text-gray-600">Within these scoping activities, how could Copilot help you?</p>
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Copilot Assistance</h2>
+                <p class="mb-8 text-lg text-gray-600">Within these scoping activities, how could Copilot help you?</p>
                 <div class="flex justify-center gap-4">
                     <button class="copilot-btn copilot-back-btn" onclick="closeCopilot()">Back</button>
                     <button class="copilot-btn" onclick="showSuggestions()">Suggestions</button>
@@ -262,8 +265,8 @@
             </div>
             <!-- Suggestions Screen -->
             <div id="copilotSuggestions" style="display: none;">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">AI-Powered Suggestions</h2>
-                <div id="suggestionContent" class="text-left mb-6 text-gray-600">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">AI-Powered Suggestions</h2>
+                <div id="suggestionContent" class="text-left mb-8 text-gray-600 text-lg">
                     <!-- Dynamic content will be inserted here -->
                 </div>
                  <div class="flex justify-center">
@@ -359,23 +362,19 @@
             } else {
                 content.classList.add('active');
                 icon.classList.add('rotate');
-                // Add a 40px buffer to the scrollHeight to ensure content isn't cut off
-                content.style.maxHeight = (content.scrollHeight + 40) + "px";
+                // Use a larger buffer to account for bigger font and padding
+                content.style.maxHeight = (content.scrollHeight + 80) + "px";
             }
         }
 
         // Recalculate height on window resize to handle text reflow
         window.addEventListener('resize', () => {
             document.querySelectorAll('.accordion-content.active').forEach(activeContent => {
-                // Add a 40px buffer here as well for consistency
-                activeContent.style.maxHeight = (activeContent.scrollHeight + 40) + "px";
+                // Use a larger buffer here as well for consistency
+                activeContent.style.maxHeight = (activeContent.scrollHeight + 80) + "px";
             });
         });
     </script>
 </body>
 </html>
-
-
-
-
 
