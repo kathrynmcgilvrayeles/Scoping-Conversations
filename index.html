@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&D Strategic Scoping for Banking Teams</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Brand Colours:
+           Red: #ED0000
+           Black: #000000
+           White: #FFFFFF
+           Grey 2: #F5F5F5
+           Grey 3: #E6E6E6
+           Grey 4: #B3B3B3
+           Grey 5: #4D4D4D
+        */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF; /* Brand colour: White */
+        }
+        .brand-red {
+            color: #ED0000;
+        }
+        .bg-brand-red {
+            background-color: #ED0000;
+        }
+        .accordion-header {
+            background-color: #E6E6E6; /* Brand colour: Grey 3 */
+            color: #4D4D4D; /* Brand colour: Grey 5 */
+            border: 1px solid #E6E6E6; /* Brand colour: Grey 3 */
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .accordion-header:hover {
+            background-color: #e0e0e0;
+            color: #ED0000; /* Brand colour: Red */
+            border-color: #ED0000;
+        }
+        .accordion-header span {
+            flex-grow: 1;
+            word-wrap: break-word;
+            margin-right: 0.5rem;
+        }
+        .accordion-content {
+            background-color: #ffffff; /* White background for content for readability */
+            border: 1px solid #E6E6E6; /* Brand colour: Grey 3 */
+            border-top: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin-top: -0.5rem; /* Pull up to connect with header */
+            box-shadow: 0 3px 5px rgba(0,0,0,0.02);
+            overflow: hidden;
+            max-height: 0;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            word-wrap: break-word;
+        }
+        .accordion-content p {
+            color: #333333; /* Darker text for readability */
+        }
+        .accordion-content.active {
+            padding-top: 1.5rem; /* More padding to separate from header */
+            padding-bottom: 1rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .accordion-icon.rotate {
+            transform: rotate(180deg);
+        }
+        .content-section {
+            margin-bottom: 1rem;
+        }
+        .content-section h4 {
+            font-weight: 600;
+            color: #000000; /* Brand colour: Black */
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            padding-left: 0;
+            color: #333333; /* Darker text for readability */
+        }
+        ul li strong {
+            color: #ED0000; /* Brand colour: Red for bold subheadings */
+            font-weight: 600;
+        }
+        
+        /* Copilot Overlay Styles */
+        .copilot-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .copilot-container {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .copilot-btn {
+            background-color: #ED0000;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+        }
+        .copilot-btn:hover {
+            background-color: #c80000;
+        }
+        .copilot-back-btn {
+             background-color: #E6E6E6;
+             color: #4D4D4D;
+             border: 1px solid #B3B3B3;
+        }
+         .copilot-back-btn:hover {
+             background-color: #d4d4d4;
+         }
+    </style>
+</head>
+<body class="p-6 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-brand-red text-white p-4 rounded-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-center">
+                Scoping Conversations
+            </h1>
+        </div>
+        
+        <!-- Accordion Item 1: Understanding the Business Context & Performance Gaps -->
+        <div class="mb-4">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>1. Understand the Business Context & Performance Gaps</span>
+                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content">
+                <p>Before discussing a solution, it's critical to understand the team's strategic goals, their key performance indicators (KPIs), and the specific business challenges they face.</p>
+                <div class="content-section">
+                    <h4>Practical Tips & Questions:</h4>
+                    <ul>
+                        <li><strong>Connect to Strategy:</strong> "What are the most important business goals for your team this quarter/year? How does this request support those goals?"</li>
+                        <li><strong>Identify Performance Gaps:</strong> "What specific metrics are you trying to improve (e.g., client satisfaction scores, sales conversion rates, loan processing times, compliance adherence)? Where are the biggest gaps between current performance and the target?"</li>
+                        <li><strong>Quantify the Impact:</strong> "What is the business impact of not addressing this issue? Can we quantify it in terms of revenue, risk, cost, or efficiency?"</li>
+                        <li><strong>Gather Evidence:</strong> "What data do you have that points to this being a skills or knowledge gap? (e.g., quality assurance reports, voice-of-customer feedback, performance data)."</li>
+                         <li><strong>Consider External Factors:</strong> "Are there any upcoming changes that might be impacting performance (e.g., new regulations, product launches, technology updates)?"</li>
+                    </ul>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="copilot-btn" onclick="openCopilot(event, 1)">Copilot Assistance?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion Item 2: Defining Business Outcomes & Learning Objectives -->
+        <div class="mb-4">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>2. Define Business Outcomes & Learning Objectives</span>
+                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content">
+                <p>Move the conversation from a vague training request to a tangible business outcome. Clearly define what success looks like and what employees need to be able to do differently.</p>
+                <div class="content-section">
+                    <h4>Practical Tips & Questions:</h4>
+                    <ul>
+                        <li><strong>Focus on Behaviour:</strong> "After this initiative, what will employees be able to DO differently or better? What does success look like in action?"</li>
+                        <li><strong>Use the '5 Whys':</strong> Drill down from the business problem to uncover the root cause. (e.g., "The team isn't meeting its cross-sell target." <span class="font-bold">Why?</span> "They aren't identifying opportunities." <span class="font-bold">Why?</span> "They aren't confident asking the right discovery questions.")</li>
+                        <li><strong>Set Success Metrics:</strong> "How will we measure success? Let's link our measures back to the business KPIs we identified earlier. What's the target improvement?"</li>
+                        <li><strong>Explore Non-Training Factors:</strong> "Training is one tool, but what other factors might be influencing performance? Let's consider processes, systems, motivation, or role clarity."</li>
+                    </ul>
+                </div>
+                 <div class="text-center mt-4">
+                    <button class="copilot-btn" onclick="openCopilot(event, 2)">Copilot Assistance?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion Item 3: Identifying Constraints, Risks, and Dependencies -->
+        <div class="mb-4">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>3. Identify Constraints, Risks, and Dependencies</span>
+                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content">
+                <p>Every initiative has practical limitations. Identifying budget, timeline, technology, and resource constraints upfront is essential for designing a realistic and effective solution.</p>
+                <div class="content-section">
+                    <h4>Practical Tips & Questions:</h4>
+                    <ul>
+                        <li><strong>Clarify Resources:</strong> "What is the budget for this initiative? What is the ideal timeline for implementation?"</li>
+                        <li><strong>Learner Availability:</strong> "Realistically, how much time can employees be away from their daily tasks for learning activities? Are there peak business periods we need to avoid?"</li>
+                        <li><strong>SME & Stakeholder Commitment:</strong> "Who are the key subject matter experts (SMEs) we need input from? How much of their time can we secure? Who are the key stakeholders that need to be involved in reviews and sign-offs?"</li>
+                        <li><strong>Identify Dependencies:</strong> "Are there dependencies on other teams or projects (e.g., IT for system access, Compliance for content approval, Marketing for new product information)?"</li>
+                        <li><strong>Assess Risks:</strong> "What are the biggest risks to this project's success? (e.g., changing business priorities, lack of manager support, technology limitations)."</li>
+                    </ul>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="copilot-btn" onclick="openCopilot(event, 3)">Copilot Assistance?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion Item 4: Clarifying Audience and Scope -->
+        <div class="mb-4">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <span>4. Clarify the Learner Audience & Scope of the Initiative</span>
+                <svg class="accordion-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content">
+                <p>Defining clear boundaries prevents "scope creep" and ensures the learning solution is targeted to the right people with the right content.</p>
+                <div class="content-section">
+                    <h4>Practical Tips & Questions:</h4>
+                    <ul>
+                        <li><strong>Define the Audience Persona:</strong> "Who exactly is the target audience? (e.g., new personal bankers, experienced wealth advisors, team leaders). What is their current level of knowledge on this topic? What motivates them?"</li>
+                        <li><strong>Create an "In/Out" List:</strong> "What specific topics, skills, systems, or products will be covered? Equally important, what related topics are explicitly OUT of scope for this initiative?"</li>
+                        <li><strong>Discuss Modality:</strong> "Based on the need and audience, what type of solution might be most effective? (e.g., workshops, eLearning, job aids, a coaching framework, system simulations)."</li>
+                        <li><strong>Establish Change Control:</strong> "Once we agree on the scope, what will be the process if new topics or audiences need to be added?"</li>
+                        <li><strong>Agree on Roles:</strong> "Let's clarify roles and responsibilities. Who will be responsible for content provision, reviews, and final sign-off?"</li>
+                    </ul>
+                </div>
+                 <div class="text-center mt-4">
+                    <button class="copilot-btn" onclick="openCopilot(event, 4)">Copilot Assistance?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copilot Overlay -->
+    <div id="copilotOverlay" class="copilot-overlay">
+        <div class="copilot-container">
+            <!-- Question Screen -->
+            <div id="copilotQuestion">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Copilot Assistance</h2>
+                <p class="mb-6 text-gray-600">Within these scoping activities, how could Copilot help you?</p>
+                <div class="flex justify-center gap-4">
+                    <button class="copilot-btn copilot-back-btn" onclick="closeCopilot()">Back</button>
+                    <button class="copilot-btn" onclick="showSuggestions()">Suggestions</button>
+                </div>
+            </div>
+            <!-- Suggestions Screen -->
+            <div id="copilotSuggestions" style="display: none;">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">AI-Powered Suggestions</h2>
+                <div id="suggestionContent" class="text-left mb-6 text-gray-600">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                 <div class="flex justify-center">
+                     <button class="copilot-btn copilot-back-btn" onclick="backToQuestion()">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const copilotSuggestions = {
+            1: `
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Analyse Performance Data:</strong> Paste in performance data (e.g., from a CSV) to quickly identify trends, averages, and outliers that indicate a skills gap.</li>
+                    <li><strong>Summarise Documents:</strong> Provide lengthy business reports or strategy documents to extract key goals and priorities relevant to the team.</li>
+                    <li><strong>Draft Stakeholder Questions:</strong> Ask it to generate targeted discovery questions for different stakeholders (e.g., 'Generate questions for a bank manager about low loan conversion rates').</li>
+                    <li><strong>Research Benchmarks:</strong> Ask for typical industry benchmarks for relevant KPIs to help quantify the performance gap.</li>
+                </ul>
+            `,
+            2: `
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Brainstorm Objectives:</strong> Describe the business problem and ask it to brainstorm a range of potential behavioural learning objectives.</li>
+                    <li><strong>Refine to SMART Goals:</strong> Provide a vague objective like "Improve product knowledge" and ask it to refine it into a SMART (Specific, Measurable, Achievable, Relevant, Time-bound) objective.</li>
+                    <li><strong>'5 Whys' Analysis:</strong> State the initial problem and ask Copilot to perform a '5 Whys' analysis to drill down to potential root causes.</li>
+                    <li><strong>Suggest Success Metrics:</strong> Ask it to suggest various ways to measure the success of the initiative, including both quantitative (KPIs) and qualitative (behavioural observation) metrics.</li>
+                </ul>
+            `,
+            3: `
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Create Project Checklists:</strong> Ask for a comprehensive checklist of common project constraints and risks for L&D initiatives in a banking environment.</li>
+                    <li><strong>Draft Communication Plans:</strong> Provide a list of stakeholder roles and ask it to draft a tailored communication plan, including frequency and key messages.</li>
+                    <li><strong>Brainstorm Mitigation Strategies:</strong> Describe a potential risk (e.g., 'lack of manager support') and ask it to brainstorm practical mitigation strategies.</li>
+                    <li><strong>Generate a Draft Timeline:</strong> List the key phases of your project (e.g., discovery, design, development, implementation) and ask it to generate a high-level project timeline with estimated durations.</li>
+                </ul>
+            `,
+            4: `
+                 <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Create Learner Personas:</strong> Provide a role description (e.g., 'new personal banker') and ask it to create a detailed learner persona, including potential motivations, challenges, and existing knowledge.</li>
+                    <li><strong>Draft Scope Statements:</strong> Based on the learning objectives, ask it to draft a clear "In Scope / Out of Scope" list to ensure clarity.</li>
+                    <li><strong>Suggest Learning Modalities:</strong> Describe the audience and the content (e.g., 'compliance update for experienced advisors') and ask for recommendations on the most suitable learning modalities.</li>
+                    <li><strong>Generate a RACI Matrix:</strong> Ask it to create a draft RACI (Responsible, Accountable, Consulted, Informed) matrix template for a typical L&D project.</li>
+                </ul>
+            `
+        };
+
+        const overlay = document.getElementById('copilotOverlay');
+        const questionScreen = document.getElementById('copilotQuestion');
+        const suggestionsScreen = document.getElementById('copilotSuggestions');
+        const suggestionContent = document.getElementById('suggestionContent');
+
+        function openCopilot(event, sectionId) {
+            event.stopPropagation(); // Prevents the accordion from closing
+            suggestionContent.innerHTML = copilotSuggestions[sectionId];
+            overlay.style.display = 'flex';
+            questionScreen.style.display = 'block';
+            suggestionsScreen.style.display = 'none';
+        }
+
+        function closeCopilot() {
+            overlay.style.display = 'none';
+        }
+
+        function showSuggestions() {
+            questionScreen.style.display = 'none';
+            suggestionsScreen.style.display = 'block';
+        }
+        
+        function backToQuestion() {
+            suggestionsScreen.style.display = 'none';
+            questionScreen.style.display = 'block';
+        }
+
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            const isActive = content.classList.contains('active');
+
+            // Close all other open accordions before toggling the current one
+            document.querySelectorAll('.accordion-content.active').forEach(openContent => {
+                if (openContent !== content) {
+                    openContent.classList.remove('active');
+                    openContent.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotate');
+                    openContent.style.maxHeight = '0px';
+                }
+            });
+
+            // Toggle the clicked accordion
+            if (isActive) {
+                content.classList.remove('active');
+                icon.classList.remove('rotate');
+                content.style.maxHeight = '0px';
+            } else {
+                content.classList.add('active');
+                icon.classList.add('rotate');
+                // Add a 40px buffer to the scrollHeight to ensure content isn't cut off
+                content.style.maxHeight = (content.scrollHeight + 40) + "px";
+            }
+        }
+
+        // Recalculate height on window resize to handle text reflow
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.accordion-content.active').forEach(activeContent => {
+                // Add a 40px buffer here as well for consistency
+                activeContent.style.maxHeight = (activeContent.scrollHeight + 40) + "px";
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
